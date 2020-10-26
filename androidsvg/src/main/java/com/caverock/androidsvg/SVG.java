@@ -699,6 +699,11 @@ public class SVG
       base.setDocumentPreserveAspectRatio(preserveAspectRatio);
    }
 
+   /** Set optional STROKE / FILL colour callback */
+   public void setColourCallback(SVGBase.ColourCallback colourCB) {
+      if (base==null) return;
+      base.setColourCallBack(colourCB);
+   }
 
    /**
     * Return the "preserveAspectRatio" attribute of the root {@code <svg>}

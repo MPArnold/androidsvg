@@ -1960,6 +1960,17 @@ public class SVGBase
       this.desc = desc;
    }
 
+   //===============================================================================
+   // Define optional STROKE / FILL colour callback
+
+   /** Callback allowing user the final word on FILL/STROKE colour. Example: <br>
+   svg.setColourCallback(new SVGBase.ColourCallback() {
+      &#x0040;Override public int getPaintColour(boolean isFill, int defaultColour) { return anyColour; }
+   });
+   @see SVGAndroidRenderer#setPaintColour(SVGAndroidRenderer.RendererState, boolean, SvgPaint) */
+   public interface ColourCallback { int getPaintColour(boolean isFill, int defaultColor); }
+   public ColourCallback colourCB=null;
+   public void setColourCallBack(ColourCallback colourCB) { this.colourCB = colourCB; }
 
    //===============================================================================
    // Path definition
