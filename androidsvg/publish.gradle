@@ -14,8 +14,8 @@ def  version = '1.4.1'
 def  libraryName = 'androidsvgCOLOR'
 def  libraryDescription = 'AndroidSVG with colour control.'
 
-def  artifactIdAAR = 'svgcolor-aar'
-def  artifactIdJAR = 'svgcolor'
+def  artifactIdAAR = 'androidsvg-aar'
+def  artifactIdJAR = 'androidsvg'
 def  group = 'nz.gpskaihu'
 
 def  developerId = 'MPArnold'
