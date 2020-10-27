@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -15,6 +15,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+        //maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
     }
 }
