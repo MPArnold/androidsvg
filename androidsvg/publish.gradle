@@ -7,23 +7,22 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 
-def  version = '1.4.1'
-//def  version = '1.5'
+def  version = '1.5'
 //version = '1.3-SNAPSHOT'
 
-def  libraryName = 'androidsvgCOLOR'
-def  libraryDescription = 'AndroidSVG with colour control.'
+def  libraryName = 'AndroidSVG'
+def  libraryDescription = 'SVG rendering library for Android.'
 
 def  artifactIdAAR = 'androidsvg-aar'
 def  artifactIdJAR = 'androidsvg'
-def  group = 'nz.gpskaihu'
+def  group = 'com.caverock'
 
-def  developerId = 'MPArnold'
-def  developerName = 'Matt Arnold'
-def  developerEmail = 'koparapara@gmail.com'
+def  developerId = 'BigBadaboom'
+def  developerName = 'Paul LeBeau'
+def  developerEmail = 'androidsvgfeedback@gmail.com'
 
-def  siteUrl = 'https://github.com/MPArnold/androidsvgCOLOR'
-def  gitUrl = 'https://github.com/MPArnold/androidsvgCOLOR.git'
+def  siteUrl = 'https://github.com/BigBadaboom/androidsvg'
+def  gitUrl = 'https://github.com/BigBadaboom/androidsvg.git'
 
 def  licenseName = 'The Apache Software License, Version 2.0'
 def  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -56,8 +55,8 @@ publishing {
                 builtBy { tasks["assembleRelease"] }
             }
             afterEvaluate {
-               artifact sourcesJar
-               artifact javadocJar
+                artifact sourcesJar
+                artifact javadocJar
             }
 
             pom {
@@ -94,9 +93,9 @@ publishing {
             groupId = group
 
             afterEvaluate {
-               artifact libraryJar
-               artifact sourcesJar
-               artifact javadocJar
+                artifact libraryJar
+                artifact sourcesJar
+                artifact javadocJar
             }
 
             pom {
@@ -162,7 +161,7 @@ task libraryJar(type: Jar, dependsOn: 'compileReleaseJavaWithJavac') {
     from {
         configurations.compile.findAll {
             it.getName() != 'android.jar' &&
-            !it.getName().startsWith('junit')
+                    !it.getName().startsWith('junit')
         }.collect {
             it.isDirectory() ? it : zipTree(it)
         }
