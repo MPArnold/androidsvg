@@ -2698,7 +2698,7 @@ public class SVGAndroidRenderer
       }
       col = colourWithOpacity(col, paintOpacity);
       // Allow user the final word on FILL and STROKE colour.
-      if (document.colourCB!=null) { col = document.colourCB.getPaintColour(isFill, col); }
+      if (document.colourCB!=null) { col = document.colourCB.getPaintColour(document, isFill, col); }
       if (isFill)
          state.fillPaint.setColor(col);
       else

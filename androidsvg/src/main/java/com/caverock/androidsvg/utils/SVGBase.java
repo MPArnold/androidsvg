@@ -1965,7 +1965,7 @@ public class SVGBase
 
    /** Callback allowing user the final word on FILL/STROKE colour.
    @see SVGAndroidRenderer#setPaintColour(SVGAndroidRenderer.RendererState, boolean, SvgPaint) */
-   public interface ColourCallback { int getPaintColour(boolean isFill, int defaultColor); }
+   public interface ColourCallback { int getPaintColour(SVGBase document, boolean isFill, int defaultColor); }
    public ColourCallback colourCB=null;
    public void setColourCallBack(ColourCallback colourCB) { this.colourCB = colourCB; }
 

@@ -6,9 +6,6 @@
 (1) com.caverock.androidsvg.utils.SVGBase
 Add the following anywhere ...
 --------------------------------------------------------------------- */
-	//===============================================================================
-	// Define optional STROKE / FILL colour callback
-
 	/** Callback allowing user the final word on FILL/STROKE colour.
 	@see SVG#setColourCallback(SVGBase.ColourCallback colourCB)
 	@see SVGAndroidRenderer#setPaintColour(SVGAndroidRenderer.RendererState, boolean, SvgPaint) */

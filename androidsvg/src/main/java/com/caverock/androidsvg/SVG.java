@@ -701,7 +701,7 @@ public class SVG
 
    /** Set optional STROKE / FILL colour callback. Example: <br>
    svg.setColourCallback(new SVGBase.ColourCallback() {
-      &#x0040;Override public int getPaintColour(boolean isFill, int defaultColour) { return defaultColour; }
+      &#x0040;Override public int getPaintColour(SVGBase document, boolean isFill, int defaultColour) { return defaultColour; }
    }); */
    public void setColourCallback(SVGBase.ColourCallback colourCB) {
       if (base==null) return;
