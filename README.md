@@ -6,6 +6,8 @@ The well-known [AndroidSVG](https://github.com/BigBadaboom/androidsvg) does not 
 
 This fork gives users the final word on colour by deploying a callback fired whenever the `Paint` colour is set and came about because I needed to paint user-defined Inkscape SVGs with appropriately contrasted colours over variously-coloured raster map layers.
 
+The need arose because the original author wished to enforce the inferior CSS-based method "_for the sake of standards_".
+
 ## Implementation
 Add the following to your **project** build.gradle:
 ```gradle
